@@ -12,7 +12,7 @@
 <title>Store List</title>
 </head>
 <body>
-	<a href="">index</a>
+	<a href="<%=request.getContextPath()%>/index.jsp">index</a>
 	<h1>Store List</h1>
 	<table border="1">
 		<thead>

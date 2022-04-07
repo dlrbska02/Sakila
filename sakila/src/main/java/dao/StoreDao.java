@@ -1,16 +1,23 @@
 package dao;
 import java.util.*;
 import util.DBUtil;
+
 import java.sql.*;
 public class StoreDao {
+	public List<Integer> selectStoreIdList() {
+		List<Integer> list = new ArrayList<Integer>();
+		// 
+		return list;
+	}
+
 	public List<Map<String, Object>> selectStoreList() {
 		List<Map<String, Object>> list = new ArrayList<>(); // 다형성
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
-			//Class.forName("org.mariadb.jdbc.Driver");
-			//conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
+			// Class.forName("org.mariadb.jdbc.Driver");
+			// conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
 			conn = DBUtil.getConnection();
 			/*
 				SELECT 
@@ -54,7 +61,7 @@ public class StoreDao {
 			e.printStackTrace();
 			System.out.println("예외발생");
 		} finally {
-			try { //DB자원 반환
+			try {
 				rs.close();
 				stmt.close();
 				conn.close();
@@ -64,18 +71,18 @@ public class StoreDao {
 		}
 		return list;
 	}
-
-	// selectStoreList() 테스트 코드 
+	
+	// selectStoreList() 테스트 코드 <- 단위테스트
 	public static void main(String[] args) {
 		StoreDao dao = new StoreDao();
 		List<Map<String, Object>> list = dao.selectStoreList();
 		for(Map m : list) {
-			System.out.println(m.get("storeId")+", ");
-			System.out.println(m.get("staffId")+", ");
-			System.out.println(m.get("staffName")+", ");
-			System.out.println(m.get("addressId")+", ");
-			System.out.println(m.get("staffAddress")+", ");
-			System.out.println(m.get("lastUpdate")+", ");
+			System.out.print(m.get("storeId")+", ");
+			System.out.print(m.get("staffId")+", ");
+			System.out.print(m.get("staffName")+", ");
+			System.out.print(m.get("addressId")+", ");
+			System.out.print(m.get("staffAddress")+", ");
+			System.out.print(m.get("lastUpdate"));
 			System.out.println("");
 		}
 	}

@@ -38,7 +38,7 @@
 				<tr>
 					<td><%=f.getFid()%></td>
 					<td><%=f.getTitle()%></td>
-					<td><%=f.getDesciption()%></td>
+					<td><%=f.getDescription()%></td>
 					<td><%=f.getCategory()%></td>
 					<td><%=f.getPrice()%></td>
 					<td><%=f.getLength()%></td>

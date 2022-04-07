@@ -19,6 +19,7 @@
 		<li><a href="<%=request.getContextPath()%>/salesByFilmCategory.jsp">salesByFilmCategory(view)</a></li>
 		<li><a href="<%=request.getContextPath()%>/salesByStore.jsp">salesByStore(view)</a></li>
 		<li><a href="<%=request.getContextPath()%>/staffList.jsp">staffList(view)</a></li>
+		<li><a href="<%=request.getContextPath()%>/rentalSearchForm.jsp">대여 상세검색</a></li>
 	</ol>
 </body>
 </html> 
