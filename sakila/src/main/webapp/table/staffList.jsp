@@ -32,7 +32,7 @@
 		</thead>
 		<tbody>
 				<%
-					for(Map m : list) {
+					for(Map<String, Object> m : list) {
 				%>
 						<tr>
 							<td class="text-info"><%=m.get("staffName")%></td>

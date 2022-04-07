@@ -27,7 +27,7 @@
 		</thead>
 		<tbody>
 			<%
-				for(Map m : list) {
+				for(Map<String, Object> m : list) {
 			%>
 					<tr>
 						<td><%=m.get("storeId")%></td>

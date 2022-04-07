@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href="<%=request.getContextPath()%>/index.jsp">index</a>
    <h1>대여 상세 검색</h1>
    <form action="<%=request.getContextPath()%>/rentalSearchAction.jsp" method="post">
       <table border="1">

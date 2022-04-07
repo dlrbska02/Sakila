@@ -76,7 +76,7 @@ public class StoreDao {
 	public static void main(String[] args) {
 		StoreDao dao = new StoreDao();
 		List<Map<String, Object>> list = dao.selectStoreList();
-		for(Map m : list) {
+		for(Map<String, Object> m : list) {
 			System.out.print(m.get("storeId")+", ");
 			System.out.print(m.get("staffId")+", ");
 			System.out.print(m.get("staffName")+", ");
